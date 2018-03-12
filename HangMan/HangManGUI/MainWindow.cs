@@ -9,9 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HangManGUI {
-	public partial class Form1 : Form {
-		public Form1() {
+	public partial class MainWindow : Form {
+		public MainWindow() {
 			InitializeComponent();
+			InitializeLetterButtons();
+		}
+
+		private void letterButton_Click(object sender, EventArgs e) {
+			System.Windows.Forms.Button button = (System.Windows.Forms.Button)sender;
+
+
 		}
 	}
 }
