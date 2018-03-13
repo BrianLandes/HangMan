@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,7 +81,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="001.jpg" />
+    <EmbeddedResource Include="001.jpg" />
+    <EmbeddedResource Include="Stage0.jpg" />
+    <EmbeddedResource Include="Stage1.jpg" />
+    <EmbeddedResource Include="Stage2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HangManGame\HangManGame.csproj">
+      <Project>{c39c45d1-eca1-4746-95a7-afcc23fb3581}</Project>
+      <Name>HangManGame</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

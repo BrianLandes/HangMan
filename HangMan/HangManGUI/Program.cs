@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HMG;
 
 namespace HangManGUI {
 	static class Program {
@@ -13,7 +14,9 @@ namespace HangManGUI {
 		static void Main() {
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainWindow());
+			MainWindow window = new MainWindow();
+			Controller controller = new Controller(window);
+			Application.Run(window);
 		}
 	}
 }
