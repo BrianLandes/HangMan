@@ -29,21 +29,27 @@ namespace HMG {
 
 				if ( game.WordCompleted ) {
 					window.DisableAllButtons();
+					window.SetProgressCorrect(game.CurrentWordIndex);
 				}
 			} else {
 				window.SetLetterButtonAsWrongGuess(letter);
 				window.SetStage(game.WrongGuesses);
 				if ( game.WrongGuesses == 3 ) {
 					window.DisableAllButtons();
+					window.SetProgressWrong(game.CurrentWordIndex);
 				}
 			}
 		}
 
 		private void OnNextWordButton() {
+			if ( !game.WordCompleted ) {
+				window.SetProgressWrong(game.CurrentWordIndex);
+			}
 			game.NextWord();
 			window.ResetLetterButtons();
 			window.ShownWord = game.CurrentWordShown;
 			window.SetStage(0);
+			window.NextButtonEnabled = game.HasNext;
 		}
 	}
 }

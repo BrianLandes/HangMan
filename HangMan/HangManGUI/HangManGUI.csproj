@@ -81,16 +81,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="001.jpg" />
-    <EmbeddedResource Include="Stage0.jpg" />
-    <EmbeddedResource Include="Stage1.jpg" />
-    <EmbeddedResource Include="Stage2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\HangManGame\HangManGame.csproj">
       <Project>{c39c45d1-eca1-4746-95a7-afcc23fb3581}</Project>
       <Name>HangManGame</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Stage0.png" />
+    <Content Include="Stage1.png" />
+    <Content Include="Stage2.png" />
+    <Content Include="Stage3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

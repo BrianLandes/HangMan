@@ -16,11 +16,12 @@ namespace HangManGUI {
 		public MainWindow() {
 			InitializeComponent();
 			InitializeLetterButtons();
+			InitializeProgressBoxes();
 			images = new Image[4];
 			images[0] = Properties.Resources.Stage0;
 			images[1] = Properties.Resources.Stage1;
 			images[2] = Properties.Resources.Stage2;
-			images[3] = Properties.Resources._001;
+			images[3] = Properties.Resources.Stage3;
 		}
 
 		public Action<string> OnLetterButton;
@@ -68,6 +69,24 @@ namespace HangManGUI {
 			char l = letter.ToUpper()[0];
 			int index = (int)l - 65;
 			return lettersButtons[index];
+		}
+
+		public bool NextButtonEnabled {
+			set => nextWordButton.Enabled = value;
+		}
+
+		public void SetProgressCorrect( int position ) {
+			System.Windows.Forms.RichTextBox box = progressBoxes[position];
+			box.Visible = true;
+			box.Text = "O";
+			box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+		}
+
+		public void SetProgressWrong(int position) {
+			System.Windows.Forms.RichTextBox box = progressBoxes[position];
+			box.Visible = true;
+			box.Text = "X";
+			box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
 		}
 
 		private void letterButton_Click(object sender, EventArgs e) {

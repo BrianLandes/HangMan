@@ -8,12 +8,13 @@ namespace HMG {
     public class HangManGame {
 
 		private string[] allWords = new string[] {
+			"paraphilia",
+			"frotteurism",
 			"sadism",
-			"masochism",
 			"fetishism",
-			"fouterrism",
 			"voyeurism",
-			"exibitionism"
+			"masochism",
+			"exibitionism",
 		};
 
 		public int CurrentWordIndex { get; private set; }
@@ -34,6 +35,10 @@ namespace HMG {
 		}
 
 		public int WrongGuesses;
+
+		public bool HasNext {
+			get => CurrentWordIndex != allWords.Length-1;
+		}
 
 		public HangManGame() {
 			CurrentWordIndex = 0;
@@ -71,7 +76,7 @@ namespace HMG {
 		public void NextWord() {
 			// TODO check that the index is within the bounds
 			CurrentWordIndex += 1;
-			if ( CurrentWordIndex == allWords.Length ) {
+			if (CurrentWordIndex == allWords.Length) {
 				CurrentWordIndex = 0;
 			}
 

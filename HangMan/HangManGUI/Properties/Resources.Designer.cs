@@ -63,9 +63,9 @@ namespace HangManGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _001 {
+        internal static System.Drawing.Bitmap Stage0 {
             get {
-                object obj = ResourceManager.GetObject("001", resourceCulture);
+                object obj = ResourceManager.GetObject("Stage0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace HangManGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Stage0 {
+        internal static System.Drawing.Bitmap Stage01 {
             get {
-                object obj = ResourceManager.GetObject("Stage0", resourceCulture);
+                object obj = ResourceManager.GetObject("Stage01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +96,16 @@ namespace HangManGUI.Properties {
         internal static System.Drawing.Bitmap Stage2 {
             get {
                 object obj = ResourceManager.GetObject("Stage2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stage3 {
+            get {
+                object obj = ResourceManager.GetObject("Stage3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
